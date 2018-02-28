@@ -1,0 +1,13 @@
+task foo {
+	println "Doing stuff"
+}
+
+task process(type: Exec){
+	
+	commandLine "python", "process.py", "Annotations.Table", "cmuarctic.data.txt"
+}
+
+task extract(type: Exec){
+	dependsOn process
+	commandLine "python", "extract.py", "extractinfo.txt", "channel1.wav"
+}
