@@ -5,7 +5,7 @@ VOICEBUILDING FOR TTS
 
 Prerequisites:
     - .Table file from praat
-    - .txt file with the prompts (cmu-arctic)
+    - .txt file with the prompts (cmu-arctic.data.txt)
     - .flac file with the recording or a .wav file
     - SoX for the sound segmentation
 
@@ -14,6 +14,7 @@ Prerequisites:
 
 import subprocess
 import os, sys
+import re
 
 
 def read_boundaries(boundaries_table):
@@ -29,14 +30,14 @@ def read_boundaries(boundaries_table):
 
 
 def read_prompts(prompts_file):
-    """ Reads the .txt file which was used to create the presentation, and extracts
-        all prompts, given that they were written as H2 in the .md file. """
+    """ Reads the .txt file with the prompts. """
 
     prompts = []
     with open(prompts_file, 'r', encoding = "utf-8") as f:
         for line in f:
-            if line.startswith("##"):
-                prompts.append(line.strip().replace("## ", ""))
+            if "arctic" in line:
+                prompts.append(re.search('"(.+)"', line).group(1))
+                print(re.search('"(.+)"', line).group(1))
 
     return prompts
 
@@ -45,7 +46,7 @@ def segment_sounds(sound_file, boundaries_list):
     """ Uses SoX to extract each prompt recording from the audio file. Saves them
         in a new folder named 'extracts'. """
 
-    newpath = '../extracts'
+    newpath = 'build/extracts'
     if not os.path.exists(newpath):
         os.makedirs(newpath)
 
@@ -55,7 +56,7 @@ def segment_sounds(sound_file, boundaries_list):
         end = b[1]
         counter += 1
 
-        p = subprocess.Popen(["sox " + sound_file + " -r 16k ../extracts/" + str(counter) + ".wav trim " + start + " =" + end], shell=True)
+        p = subprocess.Popen(["sox " + sound_file + " -r 16k build/extracts/" + str(counter) + ".wav trim " + start + " =" + end], shell=True)
         p.wait()
 
     return None
@@ -64,14 +65,14 @@ def save_prompts(prompts_list):
     """ Creates a separate text file for every prompt in the prompts_list, and
         saves them in a new folder named 'prompts'."""
 
-    newpath = '../prompts'
+    newpath = 'build/prompts'
     if not os.path.exists(newpath):
         os.makedirs(newpath)
 
     counter = 0
     for p in prompts_list:
         counter += 1
-        with open("../prompts/" + str(counter)+".txt", 'w', encoding = "utf-8") as f:
+        with open("build/prompts/" + str(counter)+".txt", 'w', encoding = "utf-8") as f:
             f.write(p)
             f.close()
 
@@ -87,6 +88,7 @@ if __name__ == "__main__":
 
     boundaries_list = read_boundaries(boundaries_file)
     prompts_list = read_prompts(prompts_file)[:len(boundaries_list)]
+    print(prompts_list)
 
-    segment_sounds(sound_file, boundaries_list)
-    save_prompts(prompts_list)
+#    segment_sounds(sound_file, boundaries_list)
+#    save_prompts(prompts_list)
