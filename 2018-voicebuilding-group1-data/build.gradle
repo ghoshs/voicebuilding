@@ -3,6 +3,9 @@ plugins {
 	id "de.dfki.mary.voicebuilding.marytts-kaldi-mfa" version "0.3.0"
 }
 
+group 'de.uni-sb.coli.voicebuilding'
+version '0.1-SNAPSHOT'
+
 task process(type: Exec){
 	inputs.files "process.py", "Annotations.Table", "cmuarctic.data.txt"
 	ext.metadataFile = "$buildDir/metaData.txt"
