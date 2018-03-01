@@ -9,5 +9,5 @@ task process(type: Exec){
 
 task extract(type: Exec){
 	dependsOn process
-	commandLine "python", "extract.py", "extractinfo.txt", "channel1.wav"
+	commandLine "python", "extract.py", "metaData.txt", "channel1.wav"
 }

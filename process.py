@@ -12,16 +12,13 @@ def process(tablefile, promptsfile):
 	length = len(promptdata)
 
 	# create a yaml file
-	fp = open('extractinfo.txt','w')
+	fp = open('metaData.txt','w')
 
 	# copy text in separate file
 	for i in range(0, length):
 		promptLine = promptdata[i].split('"')
 		id = promptLine[0].split(' ')[1]
 		text = promptLine[1]
-		# fp1 = open(path+id+'.txt', 'w')
-		# fp1.write(text)
-		# fp1.close()
 
 		tableLine = tabledata[i].split('\t')
 		fp.write(id+'\t'+text+'\t'+tableLine[0]+'\t'+tableLine[2]+'\n')
