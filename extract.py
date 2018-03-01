@@ -19,7 +19,7 @@ def extract(filename, flacname):
 		text = line.split('\t')[1]
 		startt = line.split('\t')[2]
 		endt = line.split('\t')[3]
-		command = "sox 2018-voicebuilding-group1-raw-audio.wav -r 16k "+audpath+"/"+id+".wav trim "+startt+"  ="+endt+" remix 1"
+		command = "sox 2018-voicebuilding-group1-raw-audio.flac -r 16k "+audpath+"/"+id+".wav trim "+startt+"  ="+endt+" remix 1"
 		os.system(command)
 		fp1 = open(textpath+'/'+id+'.txt', 'w')
 		fp1.write(text)
