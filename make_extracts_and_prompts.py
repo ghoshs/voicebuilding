@@ -5,7 +5,7 @@ VOICEBUILDING FOR TTS
 
 Prerequisites:
     - .Table file from praat
-    - .md file with the prompts (the one used for the presentation will do)
+    - .txt file with the prompts (cmu-arctic)
     - .flac file with the recording or a .wav file
     - SoX for the sound segmentation
 
@@ -29,7 +29,7 @@ def read_boundaries(boundaries_table):
 
 
 def read_prompts(prompts_file):
-    """ Reads the .md file which was used to create the presentation, and extracts
+    """ Reads the .txt file which was used to create the presentation, and extracts
         all prompts, given that they were written as H2 in the .md file. """
 
     prompts = []
@@ -55,7 +55,7 @@ def segment_sounds(sound_file, boundaries_list):
         end = b[1]
         counter += 1
 
-        p = subprocess.Popen(["sox " + sound_file + " ../extracts/" + str(counter) + ".wav trim " + start + " =" + end], shell=True)
+        p = subprocess.Popen(["sox " + sound_file + " -r 16k ../extracts/" + str(counter) + ".wav trim " + start + " =" + end], shell=True)
         p.wait()
 
     return None
@@ -80,13 +80,13 @@ def save_prompts(prompts_list):
 
 if __name__ == "__main__":
 
-    directory       = input("Path of your working directory:\n")
-    boundaries_file = directory + '/' + input("Name of your .Table file:\n")
-    prompts_file    = directory + '/' + input("Name of your prompts file (.md):\n")
-    sound_file      = directory + '/' + input("Name of your audio file:\n")
+    boundaries_file = sys.argv[1]
+    prompts_file    = sys.argv[2]
+    sound_file      = sys.argv[3]
 
 
     boundaries_list = read_boundaries(boundaries_file)
     prompts_list = read_prompts(prompts_file)[:len(boundaries_list)]
+
     segment_sounds(sound_file, boundaries_list)
     save_prompts(prompts_list)
