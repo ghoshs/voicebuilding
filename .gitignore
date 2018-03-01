@@ -8,3 +8,14 @@ fork/
 *.midi
 *.flac
 *.wav
+
+# Gradle
+.gradle/
+build/
+
+# IDEA
+.idea/
+*.iml
+
+# OSX
+.DS_Store
