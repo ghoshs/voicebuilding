@@ -1,4 +1,5 @@
 plugins {
+	id 'base'
 	id "de.dfki.mary.voicebuilding.marytts-kaldi-mfa" version "0.3.0"
 }
 
@@ -7,12 +8,28 @@ task foo {
 }
 
 task process(type: Exec){
+	inputs.files "process.py", "Annotations.Table", "cmuarctic.data.txt"
+	ext.metadataFile = "$buildDir/metaData.txt"
+	outputs.file metadataFile
 	commandLine "python", "process.py", "Annotations.Table", "cmuarctic.data.txt"
+	doFirst {
+		buildDir.mkdirs()
+	}
 }
 
 task extract(type: Exec){
 	dependsOn process
-	commandLine "python", "extract.py", "metaData.txt", "2018-voicebuilding-group1-raw-audio.flac"
+	def pyFile = "extract.py"
+	def flacFile = "2018-voicebuilding-group1-raw-audio.flac"
+	def textDir = file("$buildDir/text")
+	def wavDir = file("$buildDir/wav")
+	inputs.files pyFile, flacFile
+	outputs.dirs textDir, wavDir
+	commandLine "python", pyFile, process.metadataFile, flacFile
+	doFirst {
+		textDir.mkdirs()
+		wavDir.mkdirs()
+	}
 }
 
 runForcedAlignment.dependsOn extract

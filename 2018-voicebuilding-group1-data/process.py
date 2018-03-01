@@ -12,7 +12,7 @@ def process(tablefile, promptsfile):
 	length = len(promptdata)
 
 	# create a yaml file
-	fp = open('metaData.txt','w')
+	fp = open('build/metaData.txt','w')
 
 	# copy text in separate file
 	for i in range(0, length):
