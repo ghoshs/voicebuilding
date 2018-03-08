@@ -1,0 +1,23 @@
+plugins {
+    id "de.dfki.mary.voicebuilding-legacy" version "5.3.2"
+}
+
+dependencies {
+    data group: 'de.uni-sb.coli.voicebuilding', name: '2018-voicebuilding-group1-data', version: '0.1-SNAPSHOT'
+}
+
+task unpackData(type: Copy) {
+    from configurations.data
+    into buildDir
+    filesMatching '*.zip', { fileDetails ->
+        copy {
+            from zipTree(fileDetails.file)
+            into destinationDir
+        }
+        fileDetails.exclude()
+    }
+}
+
+legacyInit {
+    dependsOn unpackData
+}

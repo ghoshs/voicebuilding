@@ -1,0 +1,21 @@
+# Prompts
+2018-prompt-lists/
+extracts/
+prompts/
+fork/
+
+# Sound files
+*.midi
+*.flac
+*.wav
+
+# Gradle
+.gradle/
+build/
+
+# IDEA
+.idea/
+*.iml
+
+# OSX
+.DS_Store
