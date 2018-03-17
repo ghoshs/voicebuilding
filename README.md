@@ -11,8 +11,11 @@ The TextGrid is then converted to a chronological Table format and uploaded in t
 
 ### Requirements
 - SoX
+- Praat (*optional, if yu want to modify the flac file, speech alignments or the TextGrid*)
 - Python 2.7 or higher
 - Gradle v4.6
+- Docker
+- HTK account
 
 ### Download items for speech synthesis:
 Inside the 2018-voicebuilding-group1-data folder download the audio file.
@@ -36,8 +39,36 @@ From the voice-2018-voicebuilding-group1 folder run the follwing gradle command 
 ../gradlew build
 ```
 
-### 3. Train HMM
-
+### 3. HMM based voice 
+We use the [HTS](http://htk.eng.cam.ac.uk/extensions/index.shtml) voicebuilder toolkit provided by [HTK](http://htk.eng.cam.ac.uk/) to build HMM based voice.
+This part is run a docker container. We refer to these [slides](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/devops)
+for this part.
+#### a. Create a custom container
+Follow the instructions [here](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/hts-voicebuilding-with-docker) to
+create a container from a docker file.
+#### b. Prepare HMM voice features
+Run [these](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/prepare-for-hts-voicebuilding) pre-requiesites
+before we start the docker
+#### c. Run the docker
+Depending on hoe you have installed docker, you may or may not run it with sudo
+```
+sudo docker run -v $PWD:$PWD -it marytts-builder-hsmm bash -c \
+"cd $PWD; \
+/marytts/target/marytts-builder-5.2/bin/voiceimport.sh \
+HMMVoiceDataPreparation \
+HMMVoiceConfigure \
+HMMVoiceMakeData \
+HMMVoiceMakeVoice"
+```
+#### d. Assemble the voice
+```
+sudo docker run -v $PWD:$PWD -it marytts-builder-hsmm bash -c \
+"cd $PWD; \
+/marytts/target/marytts-builder-5.2/bin/voiceimport.sh \
+HMMVoiceCompiler"
+```
+Copy the buildscript from [here](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/assemble-the-hts-voice) into the 
+generated Maven project directory and run `gradle build` or `gradle run`.
 
 ### 4. Listen to the voices on new text.
 Clone the [MaryTTS v5.2](https://github.com/marytts/marytts) in the parent directory of this project and build the project using the command.
