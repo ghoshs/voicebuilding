@@ -10,12 +10,13 @@ The annonations of the recordings (a TextGrid file generated in Praat) is manual
 The TextGrid is then converted to a chronological Table format and uploaded in the repository. 
 
 ### Requirements
-- SoX
+- SoX (to process the audio file)
 - Praat (*optional, if yu want to modify the flac file, speech alignments or the TextGrid*)
-- Python 2.7 or higher
-- Gradle v4.6
-- Docker
+- Python 2.7 or higher (to run the data pre-processing scripts)
+- Gradle v4.6 (to run MaryTTS and other Gradle projects)
+- Docker (to build HMM voice)
 - HTK account
+- Java 7 or higher 
 
 ### Download items for speech synthesis:
 Inside the 2018-voicebuilding-group1-data folder download the audio file.
