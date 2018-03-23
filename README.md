@@ -30,7 +30,7 @@ gradle packageData
 ```
 or use the gradle wrapper command if Gradle is not installed.
 ```
-./gradlew packageData
+../gradlew packageData
 ```
 ### 2. Run voicebuilding
 From the voice-2018-voicebuilding-group1 folder run the follwing gradle command to unpack data and build the voices for MaryTTS
