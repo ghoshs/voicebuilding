@@ -1,171 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-  
-  
-  
-  
-  
-  
-  <head>
-    <meta id="bb-bootstrap" data-current-user="{&quot;username&quot;: &quot;s8shghos&quot;, &quot;displayName&quot;: &quot;s8shghos@stud.uni-saarland.de&quot;, &quot;uuid&quot;: &quot;{464dd9b0-26b9-4121-82f8-c5e1eac08967}&quot;, &quot;firstName&quot;: &quot;s8shghos@stud.uni-saarland.de&quot;, &quot;hasPremium&quot;: false, &quot;lastName&quot;: &quot;&quot;, &quot;avatarUrl&quot;: &quot;https://bitbucket.org/account/s8shghos/avatar/32/?ts=1522087232&quot;, &quot;isTeam&quot;: false, &quot;isSshEnabled&quot;: true, &quot;isKbdShortcutsEnabled&quot;: true, &quot;id&quot;: 11114787, &quot;isAuthenticated&quot;: true}"
-data-atlassian-id="5a95629af235c9442dc50890" />
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bitbucket</title>
-    <script nonce="" type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwMGVVZSGwIIUFBQDwU="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
-    
+# Project Seminar: Voicebuilding for TTS
+##### University of Saarland 
+##### WS 2017-18
 
+In this project we build a unit-selection and HMM text-to-speech system trained on our recordings of the first 330 prompts on the Arctic 
+dataset using a MaryTTS v5.2 voice builder. 
 
-<meta id="bb-canon-url" name="bb-canon-url" content="https://bitbucket.org">
-<meta name="bb-api-canon-url" content="https://api.bitbucket.org">
-<meta name="apitoken" content="{&quot;token&quot;: &quot;EuIVOINSqUDVBSEJrUnEuLguaExVEE21UVvhui8E7CxDNOIc5HN_rPO0z0FuKb4Vm0-JCljyaf9FZkRfpiKPO2hiVrSWMpEkrxbXD9uPPP733HUy&quot;, &quot;expiration&quot;: 1522087731.850142}">
+It is necessary to use the flac file containing the actual 3-channel recording (headset, microphone and HDMI) to generate voices recorded by our group.
+The annonations of the recordings (a TextGrid file generated in Praat) is manually edited to capture the duration of the correct utterance of each prompt.
+The TextGrid is then converted to a chronological Table format and uploaded in the repository. 
 
-<meta name="bb-commit-hash" content="665ec9cf9a4f">
-<meta name="bb-app-node" content="app-136">
-<meta name="bb-view-name" content="bitbucket.apps.repo2.views.filebrowse">
-<meta name="ignore-whitespace" content="False">
-<meta name="tab-size" content="None">
-<meta name="locale" content="en">
+### Requirements
+- SoX (to process the audio file)
+- Praat (*optional, if yu want to modify the flac file, speech alignments or the TextGrid*)
+- Python 2.7 or higher (to run the data pre-processing scripts)
+- Gradle v4.6 (to run MaryTTS and other Gradle projects)
+- Docker (to build HMM voice)
+- HTK account
+- Java 7 or higher 
 
-<meta name="application-name" content="Bitbucket">
-<meta name="apple-mobile-web-app-title" content="Bitbucket">
+### Download items for speech synthesis:
+Inside the 2018-voicebuilding-group1-data folder download the audio file.
+- [Audio File](https://bitbucket.org/lenakmeth/2018-voicebuilding-group1/downloads/2018-voicebuilding-group1-raw-audio.flac) 
 
+### 1. Generate and package data for voicebuilding
+The build.gradle runs the Python preprocessing files for generating individual text and wav files for each of the 330 prompts. Then the forced alignner
+is executed to generate the label files for the prompts. Finally, the text, wav and lab files are packaged as a zip file in build/distributions directory.
+From inside the 2018-voicebuilding-group1-data folder run the following gradle script
+```
+gradle packageData
+```
+or use the gradle wrapper command if Gradle is not installed.
+```
+../gradlew packageData
+```
+### 2. Run voicebuilding
+From the voice-2018-voicebuilding-group1 folder run the follwing gradle command to unpack data and build the voices for MaryTTS
+```
+../gradlew legacyInit
+../gradlew build
+```
 
-<meta name="theme-color" content="#0049B0">
-<meta name="msapplication-TileColor" content="#0052CC">
-<meta name="msapplication-TileImage" content="https://d301sr5gafysq2.cloudfront.net/665ec9cf9a4f/img/logos/bitbucket/mstile-150x150.png">
-<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://d301sr5gafysq2.cloudfront.net/665ec9cf9a4f/img/logos/bitbucket/apple-touch-icon.png">
-<link rel="icon" sizes="192x192" type="image/png" href="https://d301sr5gafysq2.cloudfront.net/665ec9cf9a4f/img/logos/bitbucket/android-chrome-192x192.png">
+### 3. HMM based voice 
+We use the [HTS](http://htk.eng.cam.ac.uk/extensions/index.shtml) voicebuilder toolkit provided by [HTK](http://htk.eng.cam.ac.uk/) to build HMM based voice.
+This part is run a docker container. We refer to these [slides](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/devops)
+for this part.
+#### a. Create a custom container
+Follow the instructions [here](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/hts-voicebuilding-with-docker) to
+create a container from a docker file.
+#### b. Prepare HMM voice features
+Run [these](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/prepare-for-hts-voicebuilding) pre-requiesites
+before we start the docker
+#### c. Run the docker
+Depending on hoe you have installed docker, you may or may not run it with sudo
+```
+sudo docker run -v $PWD:$PWD -it marytts-builder-hsmm bash -c \
+"cd $PWD; \
+/marytts/target/marytts-builder-5.2/bin/voiceimport.sh \
+HMMVoiceDataPreparation \
+HMMVoiceConfigure \
+HMMVoiceMakeData \
+HMMVoiceMakeVoice"
+```
+#### d. Assemble the voice
+```
+sudo docker run -v $PWD:$PWD -it marytts-builder-hsmm bash -c \
+"cd $PWD; \
+/marytts/target/marytts-builder-5.2/bin/voiceimport.sh \
+HMMVoiceCompiler"
+```
+Copy the buildscript from [here](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/assemble-the-hts-voice) into the 
+generated Maven project directory and run `gradle build` or `gradle run`.
 
-<link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=2">
-<link rel="mask-icon" href="https://d301sr5gafysq2.cloudfront.net/665ec9cf9a4f/img/logos/bitbucket/safari-pinned-tab.svg" color="#0052CC">
+### 4. Listen to the voices on new text.
+Clone the [MaryTTS v5.2](https://github.com/marytts/marytts) in the parent directory of this project and build the project using the command.
+```
+./gradlew build
+```
+Copy the zip and component descriptor xml files from the path voice-2018-voicebuilding-group1/build/distributions generated in 
+both Step 2 and 3 and copy it to the download folder in marytts. 
 
-<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket">
+Run the marytts component installer script inside the MaryTTS project.
+```
+./gradlew runInstallerGui
 
-    <meta name="description" content="">
-    <meta name="bb-single-page-app" content="true">
-    
-    <link rel="stylesheet" href="https://d301sr5gafysq2.cloudfront.net/665ec9cf9a4f/css/entry/adg3-skeleton-nav.css">
-    
-    
-      
-        <link rel="stylesheet" href="https://d301sr5gafysq2.cloudfront.net/frontbucket/vendor.0ee863a32e14.css">
-      
-    
-    
-  </head>
-  <body>
-    <div id="root">
-      
-        <div id="adg3-navigation"
-  
-  
-  
-  
-  >
-  <nav class="skeleton-nav">
-    <div class="skeleton-nav--left">
-      <div class="skeleton-nav--left-top">
-        <ul class="skeleton-nav--items">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li class="skeleton--icon"></li>
-          <li class="skeleton--icon-sub"></li>
-          <li class="skeleton--icon-sub"></li>
-          <li class="skeleton--icon-sub"></li>
-          <li class="skeleton--icon-sub"></li>
-          <li class="skeleton--icon-sub"></li>
-          <li class="skeleton--icon-sub"></li>
-        </ul>
-      </div>
-      <div class="skeleton-nav--left-bottom">
-        <div class="skeleton-nav--left-bottom-wrapper">
-          <div class="skeleton-nav--item-help"></div>
-          <div class="skeleton-nav--item-profile"></div>
-        </div>
-      </div>
-    </div>
-    <div class="skeleton-nav--right">
-      <ul class="skeleton-nav--items-wide">
-        <li class="skeleton--icon-logo-container">
-          <div class="skeleton--icon-container"></div>
-          <div class="skeleton--icon-description"></div>
-          <div class="skeleton--icon-logo"></div>
-        </li>
-        <li>
-          <div class="skeleton--icon-small"></div>
-          <div class="skeleton-nav--item-wide-content"></div>
-        </li>
-        <li>
-          <div class="skeleton--icon-small"></div>
-          <div class="skeleton-nav--item-wide-content"></div>
-        </li>
-        <li>
-          <div class="skeleton--icon-small"></div>
-          <div class="skeleton-nav--item-wide-content"></div>
-        </li>
-        <li>
-          <div class="skeleton--icon-small"></div>
-          <div class="skeleton-nav--item-wide-content"></div>
-        </li>
-        <li>
-          <div class="skeleton--icon-small"></div>
-          <div class="skeleton-nav--item-wide-content"></div>
-        </li>
-        <li>
-          <div class="skeleton--icon-small"></div>
-          <div class="skeleton-nav--item-wide-content"></div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-      
-    </div>
-    <script nonce="">
-      window.__sentry__ = {"dsn": "https://ea49358f525d4019945839a3d7a8292a@sentry.io/159509", "release": "665ec9cf9a4f (production)", "tags": {"project": "frontbucket"}, "environment": "production"};
-      window.__initial_state__ = {"section": {"repository": {"connectActions": [], "cloneProtocol": "https", "currentRepository": {"scm": "git", "website": "", "name": "2018-voicebuilding-group1", "language": "", "description": "", "links": {"clone": [{"href": "https://s8shghos@bitbucket.org/lenakmeth/2018-voicebuilding-group1.git", "name": "https"}, {"href": "git@bitbucket.org:lenakmeth/2018-voicebuilding-group1.git", "name": "ssh"}], "self": {"href": "https://bitbucket.org/!api/2.0/repositories/lenakmeth/2018-voicebuilding-group1"}, "html": {"href": "https://bitbucket.org/lenakmeth/2018-voicebuilding-group1"}, "avatar": {"href": "https://bitbucket.org/lenakmeth/2018-voicebuilding-group1/avatar/32/"}}, "full_name": "lenakmeth/2018-voicebuilding-group1", "owner": {"username": "lenakmeth", "website": null, "display_name": "Lena Metheniti", "account_id": "557058:e810814e-1978-49b8-b2a5-677eefc5bc2d", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/users/lenakmeth"}, "html": {"href": "https://bitbucket.org/lenakmeth/"}, "avatar": {"href": "https://bitbucket.org/account/lenakmeth/avatar/32/"}}, "created_on": "2014-12-21T23:43:23.750812+00:00", "is_staff": false, "location": null, "type": "user", "uuid": "{95ee177b-4c13-4b99-9987-c4ad65d121f9}"}, "type": "repository", "slug": "2018-voicebuilding-group1", "is_private": true, "uuid": "{319863f5-3c14-4b2e-b30a-a6c20422d098}"}, "menuItems": [{"analytics_label": "repository.source", "is_client_link": true, "icon_class": "icon-source", "badge_label": null, "weight": 200, "url": "/lenakmeth/2018-voicebuilding-group1/src", "tab_name": "source", "can_display": true, "label": "Source", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": ["/diff", "/history-node"], "target": "_self", "id": "repo-source-link", "icon": "icon-source"}, {"analytics_label": "repository.commits", "is_client_link": false, "icon_class": "icon-commits", "badge_label": null, "weight": 300, "url": "/lenakmeth/2018-voicebuilding-group1/commits/", "tab_name": "commits", "can_display": true, "label": "Commits", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-commits-link", "icon": "icon-commits"}, {"analytics_label": "repository.branches", "is_client_link": false, "icon_class": "icon-branches", "badge_label": null, "weight": 400, "url": "/lenakmeth/2018-voicebuilding-group1/branches/", "tab_name": "branches", "can_display": true, "label": "Branches", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-branches-link", "icon": "icon-branches"}, {"analytics_label": "repository.pullrequests", "is_client_link": false, "icon_class": "icon-pull-requests", "badge_label": "0 open pull requests", "weight": 500, "url": "/lenakmeth/2018-voicebuilding-group1/pull-requests/", "tab_name": "pullrequests", "can_display": true, "label": "Pull requests", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-pullrequests-link", "icon": "icon-pull-requests"}, {"analytics_label": "user.addon", "is_client_link": false, "icon_class": "aui-iconfont-build", "badge_label": null, "weight": 550, "url": "/lenakmeth/2018-voicebuilding-group1/addon/pipelines/home", "tab_name": "repopage-ny4dab-add-on-link", "can_display": true, "label": "Pipelines", "icon_url": null, "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "type": "connect_menu_item", "id": "repopage-ny4dab-add-on-link", "target": "_self"}, {"analytics_label": "user.addon", "is_client_link": false, "icon_class": "aui-iconfont-unfocus", "badge_label": null, "weight": 560, "url": "/lenakmeth/2018-voicebuilding-group1/addon/pipelines/deployments", "tab_name": "repopage-9aA6Gk-add-on-link", "can_display": true, "label": "Deployments", "icon_url": "https://bitbucket-assetroot.s3.amazonaws.com/add-on/icons/fca72d46-7e20-4dc4-b6a8-c83fb9665cc6.svg?Signature=5BqGwIVnSKKt6%2BrsPWf8v2jWE5Y%3D&Expires=1522089231&AWSAccessKeyId=AKIAIQWXW6WLXMB5QZAQ&versionId=z.ggvA9RJ7VZF4B8B.tbvzjqnPmgCf7w", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "type": "connect_menu_item", "id": "repopage-9aA6Gk-add-on-link", "target": "_self"}, {"analytics_label": "repository.downloads", "is_client_link": false, "icon_class": "icon-downloads", "badge_label": null, "weight": 800, "url": "/lenakmeth/2018-voicebuilding-group1/downloads/", "tab_name": "downloads", "can_display": true, "label": "Downloads", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-downloads-link", "icon": "icon-downloads"}, {"analytics_label": "site.addon", "is_client_link": false, "icon_class": "aui-iconfont-unfocus", "badge_label": null, "weight": 100, "url": "/lenakmeth/2018-voicebuilding-group1/addon/bitbucket-trello-integration-installer/trello-board", "tab_name": "repopage-eG8ydn-add-on-link", "can_display": true, "label": "Boards", "icon_url": "https://bitbucket-assetroot.s3.amazonaws.com/add-on/icons/35ceae0c-17b1-443c-a6e8-d9de1d7cccdb.svg?Signature=6Gmno0h4VzXD1QUZatn0QRyjMec%3D&Expires=1522089231&AWSAccessKeyId=AKIAIQWXW6WLXMB5QZAQ&versionId=3oqdrZZjT.HijZ3kHTPsXE6IcSjhCG.P", "anchor": false, "analytics_payload": {}, "matching_url_prefixes": [], "type": "connect_menu_item", "id": "repopage-eG8ydn-add-on-link", "target": "_self"}], "bitbucketActions": [{"analytics_label": "repository.clone", "is_client_link": false, "icon_class": "icon-clone", "badge_label": null, "weight": 100, "url": "#clone", "tab_name": "clone", "can_display": true, "label": "<strong>Clone<\/strong> this repository", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-clone-button", "icon": "icon-clone"}, {"analytics_label": "repository.create_branch", "is_client_link": false, "icon_class": "icon-create-branch", "badge_label": null, "weight": 200, "url": "/lenakmeth/2018-voicebuilding-group1/branch", "tab_name": "create-branch", "can_display": true, "label": "Create a <strong>branch<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-create-branch-link", "icon": "icon-create-branch"}, {"analytics_label": "create_pullrequest", "is_client_link": false, "icon_class": "icon-create-pull-request", "badge_label": null, "weight": 300, "url": "/lenakmeth/2018-voicebuilding-group1/pull-requests/new", "tab_name": "create-pullreqs", "can_display": true, "label": "Create a <strong>pull request<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-create-pull-request-link", "icon": "icon-create-pull-request"}, {"analytics_label": "repository.compare", "is_client_link": false, "icon_class": "aui-icon-small aui-iconfont-devtools-compare", "badge_label": null, "weight": 400, "url": "/lenakmeth/2018-voicebuilding-group1/branches/compare", "tab_name": "compare", "can_display": true, "label": "<strong>Compare<\/strong> branches or tags", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-compare-link", "icon": "aui-icon-small aui-iconfont-devtools-compare"}, {"analytics_label": "repository.fork", "is_client_link": false, "icon_class": "icon-fork", "badge_label": null, "weight": 500, "url": "/lenakmeth/2018-voicebuilding-group1/fork", "tab_name": "fork", "can_display": true, "label": "<strong>Fork<\/strong> this repository", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repo-fork-link", "icon": "icon-fork"}], "activeMenuItem": "source"}}, "global": {"features": {"cache-ref-adverts": true, "evolution": false, "app-passwords": true, "search-syntax-highlighting": true, "clonebundles": true, "deployments": true, "fe_word_diff": true, "trello-boards": true, "atlassian-editor": false, "use-moneybucket": true, "src-lastmod-for-dirs": true, "show-guidance-message": true, "new-source-browser": true, "search-satisfaction": true, "lfs_post_beta": true, "bitbucket-chats-integration": false}, "locale": "en", "geoip_country": "DE", "targetFeatures": {"cache-ref-adverts": true, "evolution": false, "app-passwords": true, "search-syntax-highlighting": true, "clonebundles": true, "deployments": true, "fe_word_diff": true, "trello-boards": true, "atlassian-editor": false, "use-moneybucket": true, "src-lastmod-for-dirs": true, "show-guidance-message": true, "new-source-browser": false, "lfs_post_beta": true, "bitbucket-chats-integration": false}, "isFocusedTask": false, "teams": [], "bitbucketActions": [{"analytics_label": null, "is_client_link": false, "icon_class": "", "badge_label": null, "weight": 100, "url": "/repo/create?owner=lenakmeth", "tab_name": null, "can_display": true, "label": "<strong>Repository<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "repository-create-drawer-item", "icon": ""}, {"analytics_label": null, "is_client_link": false, "icon_class": "", "badge_label": null, "weight": 110, "url": "/account/create-team/", "tab_name": null, "can_display": true, "label": "<strong>Team<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "team-create-drawer-item", "icon": ""}, {"analytics_label": null, "is_client_link": false, "icon_class": "", "badge_label": null, "weight": 120, "url": "/account/projects/create?owner=lenakmeth", "tab_name": null, "can_display": true, "label": "<strong>Project<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "project-create-drawer-item", "icon": ""}, {"analytics_label": null, "is_client_link": false, "icon_class": "", "badge_label": null, "weight": 130, "url": "/snippets/new?owner=lenakmeth", "tab_name": null, "can_display": true, "label": "<strong>Snippet<\/strong>", "type": "menu_item", "anchor": true, "analytics_payload": {}, "matching_url_prefixes": [], "target": "_self", "id": "snippet-create-drawer-item", "icon": ""}], "targetUser": {"username": "lenakmeth", "website": null, "display_name": "Lena Metheniti", "account_id": "557058:e810814e-1978-49b8-b2a5-677eefc5bc2d", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/users/lenakmeth"}, "html": {"href": "https://bitbucket.org/lenakmeth/"}, "avatar": {"href": "https://bitbucket.org/account/lenakmeth/avatar/32/"}}, "created_on": "2014-12-21T23:43:23.750812+00:00", "is_staff": false, "location": null, "type": "user", "uuid": "{95ee177b-4c13-4b99-9987-c4ad65d121f9}"}, "isNavigationOpen": true, "path": "/lenakmeth/2018-voicebuilding-group1/src/master/README.md", "focusedTaskBackButtonUrl": "https://bitbucket.org/lenakmeth/2018-voicebuilding-group1/src/master/", "currentUser": {"username": "s8shghos", "website": null, "display_name": "s8shghos@stud.uni-saarland.de", "account_id": "5a95629af235c9442dc50890", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/users/s8shghos"}, "html": {"href": "https://bitbucket.org/s8shghos/"}, "avatar": {"href": "https://bitbucket.org/account/s8shghos/avatar/32/"}}, "extra": {"has_ssh_key": true, "has_atlassian_account": true}, "created_on": "2018-02-27T14:01:32.454110+00:00", "is_staff": false, "location": null, "type": "user", "uuid": "{464dd9b0-26b9-4121-82f8-c5e1eac08967}"}}, "connect": {"modules": [{"onload": false, "dlg": false, "name": "Pipelines", "weight": 100, "width": "", "container_id": "ap-83c20e03-edb5-4a08-a719-51ceec3ef833", "baseurl": "https://bitbucket-pipelines.prod.public.atl-paas.net", "module_key": "runPipelineWebItem", "general": true, "disabled": false, "source": "https://bitbucket-pipelines.prod.public.atl-paas.net/runPipelineWebItem.html?ui-params=eyJpc0RpYWxvZyI6IHRydWUsICJpc0lubGluZURpYWxvZyI6IGZhbHNlfQ%3D%3D&displayName=Lena+Metheniti&repoUuid=%7B319863f5-3c14-4b2e-b30a-a6c20422d098%7D&accountUuid=%7B95ee177b-4c13-4b99-9987-c4ad65d121f9%7D&xdm_c=channel-6532fe70-1101-4ba4-9a43-dc3276484017&xdm_e=https%3A%2F%2Fbitbucket.org&crev=665ec9cf9a4f&addonKey=pipelines&environment=%2F2.0&repoPath=lenakmeth%2F2018-voicebuilding-group1&commit_hash=%7Bcommit_hash%7D&userUuid=%7B464dd9b0-26b9-4121-82f8-c5e1eac08967%7D&jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25uZWN0aW9uOjI0OTA5NTgiLCJpYXQiOjE1MjIwODc0MzEsInFzaCI6IjQxM2U5ZmUzYmNlMGQyMjQ0Njk0YmI1NWVkOWUzNTdmMGUwYjA4ZTA0YzQ0ZTIwYTk0MTRmZGU1YmIxMmEyZjAiLCJhdWQiOiJjb25uZWN0aW9uOjI0OTA5NTgiLCJleHAiOjE1MjIwOTEwMzF9.hijc6isecspjTiiEc8z0ct5RDLpoEfVZ8pR-c4BOQpM", "inline_dlg": false, "params": {"auiIcon": "aui-iconfont-build"}, "location": "org.bitbucket.commit.summary.actions", "key": "pipelines", "target": {"type": "dialog", "options": {"chrome": false, "width": "600", "height": "270"}}, "module_name": {"value": "Run pipeline"}, "height": "", "type": "webItems", "options": {"access-token-expires-in": 300, "scopes": "account pipeline:variable repository:admin repository:write", "access-token": "_hhiFNgtN5JJDGwqCn9DG-FxvO2IaedXwr6UbKirol8-TNOuf7lseQL1hhDovvsF_j2r9l_qecrs1nS2HrioUKldML_-kpq9wyPDKORdOZ4g6DNq7Q==", "client-id": "connection:2490958", "proxy-base-api-url": "https://api.bitbucket.io/addons/pipelines/lenakmeth/", "user-denied": "false", "callback-url": "https://bitbucket-pipelines.prod.public.atl-paas.net"}, "enc_context": "gAAAAABauTYH4b-I_xjm1pPehs8zzzvJFl4Gnbk5WeMgtnTx7UqbeXAdi_zeOB-Ar2HpgOvRDSMz7OJed_KP_8dq_sjo3nkpupAsaceMJYLUWg4EEey-7yy3dEVrLo68RRtb82QxdNh65h2mFGwjWkfi7gynrew04SEIvT5vy2P_RY51Qy5-IiycJDuseAlsz4j9v6naPfNAIj53EFNwvJYK3tMoqEcwlE5CWYAQ56VD68dksjm_4ug2me_YcXN47IWy82-xabJEW2Je5oROM88YISzMKsH__Sw9mE4lhny16b2pDFp38BXACoqcQxsjBap50a6o101pbjliJ-bAlPx3sFdIlHfV0A1UZxli8ikGktt5TcIkjbpg_ka3_HO7ytDEZ6sRAhwetOg0r4wytfQLdFVXSmFvxdCLFCtym2C0Zw3zLakF54Cn9Ovfj3Tuvd3CR7tlCBLCCDd5aAOty_AYokxxM_33hCxU0RyIJWnoK6L4fIOafBGi72RBV_7FU59HLDGA0xlorNlidAhAz_rOwMn5c5T1jtbMv_n2RJ4UdeG7zTxv0-rXzGnTEWu3-gnDsZZHrXa64MsO4OWZLDN33WYLdQBBU1hMDaneiEtL-CWeFjpKVxeXvYtAiEtiDQ23Q2Y3rCfpERbuVFFKFBdryju_QjzSvTTeALi4jD-tLlVQdfyf1yO_cdenCoCqGmr5sdlXiR5MqBJ1t1FArwvd89OBKGkZiiyyhqSOxoYOMi8RF8czRPs6ES0SiGLLZ4iuBMb5xMp5IbFM0ccScJQ0zgHwkvSNBExC7d-k16XEtquCMGkvMEUknkYW9DKTKIRPccpVy3nsTS5YNx5mn_11FoEweIlUsX28rlsoQHp9I9hFtKjc0Adtiy322pjG2PDtk6CDNAwEEM_orLre4D3BtbjmmvqlA4b9FaQ0-WAs2m81IvMw6-lzdbgTLJRN5V7mdr-t47ilb97m90Ub99biZG6hv1YiIM7xOb-8Vh2s2Dj5i00jAQkHldT5bzx9cmTfjvFqY8zw4djbnz6joJGL9qgVXDwVtK9FNh9vHksqqoOfcfsUMweHJyNOQu28kOlXz5v62OUHx28IwgMpZbDXFOQ5ljodDcZaBFizsgQYa7weWZgsdbSTcJPGwN900HgYiIOp4I_ZKkXdeyv9RectqveA7I4VvVK2kQve4vyiXglvg6klp7OUnwv_YAi4Xhta0BXmE8oH9nxe8i3bd7b2GpXH-tsi9o6NtP0YUjjRC1Kt8KGUUQ00zmjgMW3_5xRCxLN-_tu2pKmUHvxzjJiodv-vm60wbrjia8nYX1vdLmphrFgUvxgqeh8YfI9TW9Q9ici9jxy9"}, {"onload": false, "dlg": false, "name": "Pipelines", "weight": 100, "width": "", "container_id": "ap-ada3d104-eeae-4a58-a15e-6c6565217dec", "baseurl": "https://bitbucket-pipelines.prod.public.atl-paas.net", "module_key": "runPipelineForBranchWebItem", "general": true, "disabled": false, "source": "https://bitbucket-pipelines.prod.public.atl-paas.net/runPipelineWebItem.html?ui-params=eyJpc0RpYWxvZyI6IHRydWUsICJpc0lubGluZURpYWxvZyI6IGZhbHNlfQ%3D%3D&displayName=Lena+Metheniti&repoUuid=%7B319863f5-3c14-4b2e-b30a-a6c20422d098%7D&accountUuid=%7B95ee177b-4c13-4b99-9987-c4ad65d121f9%7D&xdm_c=channel-639b6ef1-1dbd-40d0-90d2-5fd859be7c28&xdm_e=https%3A%2F%2Fbitbucket.org&crev=665ec9cf9a4f&addonKey=pipelines&environment=%2F2.0&repoPath=lenakmeth%2F2018-voicebuilding-group1&commit_hash=%7Bbranch.target.hash%7D&userUuid=%7B464dd9b0-26b9-4121-82f8-c5e1eac08967%7D&branchName=%7Bbranch.name%7D&jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25uZWN0aW9uOjI0OTA5NTgiLCJpYXQiOjE1MjIwODc0MzEsInFzaCI6ImM1YWMwYzJjMTYzMzhkYzc2ZGJmMzAyMmJkNjI5YTQxYWQ1ZmFhYmI0MzIxZmQ1YjRlNTVkMGI5MzNlYWY5NjIiLCJhdWQiOiJjb25uZWN0aW9uOjI0OTA5NTgiLCJleHAiOjE1MjIwOTEwMzF9.aH-h3hqoP3XVUr-P8r_u9jsYQzFau2KLaZtRDbByV5c", "inline_dlg": false, "params": null, "location": "org.bitbucket.branch.list.actions", "key": "pipelines", "target": {"type": "dialog", "options": {"chrome": false, "width": "600", "height": "270"}}, "module_name": {"value": "Run pipeline for a branch"}, "height": "", "type": "webItems", "options": {"access-token-expires-in": 300, "scopes": "account pipeline:variable repository:admin repository:write", "access-token": "GeUibwp0LCTQ1G_0biKK1zH9Mj3mnfKr4iiFW-ER7tGwN2M0iVgkN8wQXoltzqIO86rq_ob_W94fDuOuaxXlt2HgMV9ImOKsQimO4jNBnenajrCR8A==", "client-id": "connection:2490958", "proxy-base-api-url": "https://api.bitbucket.io/addons/pipelines/lenakmeth/", "user-denied": "false", "callback-url": "https://bitbucket-pipelines.prod.public.atl-paas.net"}, "enc_context": "gAAAAABauTYHZ9hitKxMjIS2fGT0hhCFqHz1kH5Ve4amM3eq35ek0iGxWUZUtR6Aplq_5711wiQcwo7ISpPM_cakufkM9NReNtZGHniG0nUOOGfdRjVCP1BZ4mXqKz-pW5BakmxS1vYAtzTPwLxPI5gwr45rKY6GPLn5AiRusGS6aDoD-x8OF4hFDMDcYUMBn7kGcSNkV5pQObefxmlSJlAY0pZyMMYs-2rDka_NRJrLtuuhXcjoGoWQOzB6EkT2dazk7DWSo8Kawperdkbd8dsmyNgGeGhepNSnYu1B2x9gp8bUfTqUX0KzSeBohuLfbhpufQ-LICfFeNePSANvHyeFWmSusCKI4sYcMF_R_3sVmwHWwkvjXHTc4NL1gN-y76NXR0JsmjpF2WUA-KTIOvESUMjuR__zxAuFGG6Kq7V9nk2llExEuT1ydsKI2Q8cccbI-VZe9dzfsG0DlBGdz8TNYxHCeF7R8OYLHx-_K7NM7k6N5dbeofmX5mzEAYmWRbzYXEQ4FZzYD7j7dnwi2nCh4eRC5NHRW0nW50Y-2bIg0I6liKhOElnUjMeFpVQlpjEnzreY4IW9S9hSiIl0JeqIuRFeZsAAp0whhsb6tiQ22o8h_pYS3CM91wnWnRDzpXCGK9x-nA1aCd_5xpmfsJHS4hGxfw0JFUefjGV5oYM-Na8dxBDX3OsIlncNrog7ptR1P7dbuhcY0Ok7NhFA8IEwd577SShcnzTRvm-EKjWqhsQw08FmfOIYApGefABG4U64Jpper1M8Ia1GpDdREWqQ3Q1cj5to0FnQtqKO-A66mZjIl-VA65u4IUhQ8_t8jH12ofwD_uQbMovTotfe4zj2mvDIDgXaLyS8-iSfZaHM-odQFocAddccmmeDh5Nr6toPZDsqXV2THDrNuBxGHHX4MkFP7KJKrOTsGg73yMQ0NlW-4nSkzmDw7ka-p_QMiBPjA8YtuWJDc01rmHl1HQb8jcRIjH5EFREXuULYpAp90Q2B9goXzNeltSqqqys9A6PT4sOD8L0TkIzg9pU8PKhGkJXvLQqIyCKlLe9k2MxbD70dgVqUXVQocW8UcrhwCIAS4xKhLf9QS3zeM5GbPdFPECNeef0m5Z2o7HuIAeacpmmqrz3ZRF330_PaLQzcqtMPmY9vPk74EpZu0tgjkb4KcT9Ep_hJDZbmd0WjB8t2kAz2bVNduqNMhW1uOt7m5PcOfizDSiMO2LxAaQNNdy3Lvy1o25vK48Lv0Z91E7j4CtGcfyBH3bKkditiXVHjFA4IF9AwufKfy8ykt5WfD2MJeITV9JII-k0hT1by97VXWeHgXWyk_paanfUA-t8tFZtdb5sIL9da"}, {"onload": false, "dlg": false, "name": "Pipelines", "weight": 550, "width": "", "container_id": "ap-1ab48dc3-4a3d-4101-9fc7-44752e860f25", "baseurl": "https://bitbucket-pipelines.prod.public.atl-paas.net", "module_key": "home", "general": true, "disabled": false, "source": "https://bitbucket-pipelines.prod.public.atl-paas.net/home?connectProperties=%7Brepository.properties.get%28attribute%3Dapp.key%29%7D&displayName=Lena+Metheniti&repoUuid=%7B319863f5-3c14-4b2e-b30a-a6c20422d098%7D&accountUuid=%7B95ee177b-4c13-4b99-9987-c4ad65d121f9%7D&projectName=%7Brepository.project.name%7D&xdm_c=channel-bf0c1ba0-b6f6-4b90-a43a-b90b97cabbc0&xdm_e=https%3A%2F%2Fbitbucket.org&crev=665ec9cf9a4f&addonKey=pipelines&environment=%2F2.0&repoPath=lenakmeth%2F2018-voicebuilding-group1&userUuid=%7B464dd9b0-26b9-4121-82f8-c5e1eac08967%7D&projectKey=%7Brepository.project.key%7D&jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25uZWN0aW9uOjI0OTA5NTgiLCJpYXQiOjE1MjIwODc0MzEsInFzaCI6ImVkZTkzZGVhMTc2YzBjNjk2ZTczZmJlNDA1OTMxYzI4MjgwMWQ2ODI0OWZjYzdhZDVkMmFlMWM0NzFmNjhiNzEiLCJhdWQiOiJjb25uZWN0aW9uOjI0OTA5NTgiLCJleHAiOjE1MjIwOTEwMzF9.y_zGB0z1WLURQzdSYFsJ2Boy1NAmrEyfoilNKANqH4k", "inline_dlg": false, "params": {"auiIcon": "aui-iconfont-build"}, "location": "org.bitbucket.repository.navigation", "key": "pipelines", "module_name": {"value": "Pipelines"}, "height": "", "type": "repoPages", "options": {"access-token-expires-in": 300, "scopes": "account pipeline:variable repository:admin repository:write", "access-token": "DuY2rsCqX0EEEkUPycURTsuhKfUQqqcpUjND2UikOEVPDM8aR6pULyHJoehF3yiSu65Idbe2xom46ONbYnOhpNmmK_muimNw-Z1mv3tCl2XBp5iIuw==", "client-id": "connection:2490958", "proxy-base-api-url": "https://api.bitbucket.io/addons/pipelines/lenakmeth/", "user-denied": "false", "callback-url": "https://bitbucket-pipelines.prod.public.atl-paas.net"}, "enc_context": "gAAAAABauTYH2Ol9rE4ZAedkWYBQVdiIg_aaWbj6qh-E8WQ1TJxURWFkl9OyiNPr_MgkN9_9YF6JZIDLyeqQpLptKYiWjkAm-D49rPB7Z0DF3r0vgbgQCxqlp0DKsfNLE2AawkyImh6R6nSyIo-ijpKNifS6JE9lIZ_o3aHVLpoj6ZM2RKSKH94RNwUzzAbz17MRKMbL2W-dsiuogv_CyN9XIGaB40tNE4g486r6IvIJwFm0nEIG2ZU1-Dc2y7QvrVYcGstIphEmX7CJbLNwyTgXBF-5-erGZC8zfP4v615ULMcfJ0aF_UQUqWyQF3QxtpDKtWGizw6_UHL7B-eU5ujjd_k9J8Zf54cKCuolVk7gcohnuyK-XZjkq6DStUjAQlX1WZA8LcmTnu4nJb_MZODjGBCxi-KOaoviOGO1mZwEeNG-p7EzWmESI_PDhtd_JxCF6OHFR1yMgL182tuMlBFPyAv_mV5XOpsowUjZ153AJ-vz0kX3JKU-uh6CFmRPiBSKxlU-M6TRRnQjrO-yTrn0Pqp4odNJewd4stAl4YtvKMt-_CxsOzHYiQLM4CKNyzh8uLbrYj0XyKZF2FIQu6tq42nky3SkI0a-PRVUZ1pn968L3KroArSvvVKL9vna_w76eGfKfqrvyWs7vsplX_60VBl2qVQSCp_cWjxWeopydjv1X1cy71uWRRQZxpUqVghaGZk1EM9V-gedJgOd5T7k9Loj5NlNyK9ufq1rzbuM1EUSgyC8kmuvmRN1Sd4au1pXp5KnJoVdodcpCH66SYHk9GPonbzL7e07jJWCtML9YvfkqrvnQyPyptMjijdBIKecvK7KuyatTj7tE-Nwn0nXWnVoi--_iWppzvOxTFc5wtV0DWI5mmJLVrhOwNMKUWpcUaKMOzjxIIyWddsngvFKMF0iB5EfdF9PWtEQ37qK36vuOTSQXsJJ37ozNvBqxrDpcWtxEVIbspwF9wFcqCBidGQ2SK0Fj7EbhwWRZYztlS9j-VkyYVX_gsj_ql7dRcqF-XfZ4yWB6kKpS2Wm1L8Ozcu6_D38pfWwR7GZPu-R78LokypFf9SmC2PSWHms7ItDG4bGJ8rEQn9Lyb3KlfFmkB9bGN7v9VxS7kALeBNIAsPh0SsEI2vKnBPXX0ABnybCJNfTdjRpBR-lh-nP_6LxHQdvOJLlX2DSVxoHDvWQix-aR7hW9OhApze6gRt6uoWzXx5NI7Q2RgeG0Kw6mFf_fAWFgH1gj7ThLaErjPYTlwPYoFasSgzmClI9qft-aTt4KmBZ02leHES-pA4vb9Z3brmT72Cm4TIHOwvMX-wYcOeSAF2E7YLHuQCA96r3KpvyskINjuZq"}]}, "repository": {"source": {"section": {"hash": "3772dfc9cf0e4fb255ff7b4efd11e4a7f31744ac", "atRef": null, "ref": {"name": "master", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/repositories/lenakmeth/2018-voicebuilding-group1/refs/branches/master"}, "html": {"href": "https://bitbucket.org/lenakmeth/2018-voicebuilding-group1/branch/master"}}, "target": {"type": "commit", "hash": "3772dfc9cf0e4fb255ff7b4efd11e4a7f31744ac", "links": {"self": {"href": "https://bitbucket.org/!api/2.0/repositories/lenakmeth/2018-voicebuilding-group1/commit/3772dfc9cf0e4fb255ff7b4efd11e4a7f31744ac"}, "html": {"href": "https://bitbucket.org/lenakmeth/2018-voicebuilding-group1/commits/3772dfc9cf0e4fb255ff7b4efd11e4a7f31744ac"}}}}, "showCloneGuidance": false}}}};
-      window.__settings__ = {"JIRA_ISSUE_COLLECTORS": {"source-browser": {"url": "https://jira.atlassian.com/s/42e64237a0aa70b2fff514729f4cc549-T/ubr4ye/78000/d09c6b3599a0a8533f4324e4b45ccfea/2.0.26/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-UK&collectorId=c780a8ac", "id": "c780a8ac"}, "code-review": {"url": "https://jira.atlassian.com/s/42e64237a0aa70b2fff514729f4cc549-T/ubr4ye/78000/d09c6b3599a0a8533f4324e4b45ccfea/2.0.26/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-UK&collectorId=76ebbf00", "id": "76ebbf00"}}, "SOCIAL_AUTH_ATLASSIANID_LOGOUT_URL": "https://id.atlassian.com/logout", "CANON_URL": "https://bitbucket.org", "API_CANON_URL": "https://api.bitbucket.org"};
-      window.__webpack_nonce__ = '';
-    </script>
-    
-      <script nonce="" async src="https://jira.atlassian.com/s/42e64237a0aa70b2fff514729f4cc549-T/ubr4ye/78000/d09c6b3599a0a8533f4324e4b45ccfea/2.0.26/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-UK&amp;collectorId=c780a8ac"></script>
-      <script nonce="">
-        window.__jira_issue_collector_trigger_fns__ = window.__jira_issue_collector_trigger_fns__ || {};
-        window.ATL_JQ_PAGE_PROPS = window.ATL_JQ_PAGE_PROPS || {};
-        window.ATL_JQ_PAGE_PROPS["c780a8ac"] = window.ATL_JQ_PAGE_PROPS["c780a8ac"] || {};
-        window.ATL_JQ_PAGE_PROPS["c780a8ac"].triggerFunction = function(showCollectorDialog) {
-          window.__jira_issue_collector_trigger_fns__["c780a8ac"] = showCollectorDialog;
-        }
-      </script>
-    
-      <script nonce="" async src="https://jira.atlassian.com/s/42e64237a0aa70b2fff514729f4cc549-T/ubr4ye/78000/d09c6b3599a0a8533f4324e4b45ccfea/2.0.26/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-UK&amp;collectorId=76ebbf00"></script>
-      <script nonce="">
-        window.__jira_issue_collector_trigger_fns__ = window.__jira_issue_collector_trigger_fns__ || {};
-        window.ATL_JQ_PAGE_PROPS = window.ATL_JQ_PAGE_PROPS || {};
-        window.ATL_JQ_PAGE_PROPS["76ebbf00"] = window.ATL_JQ_PAGE_PROPS["76ebbf00"] || {};
-        window.ATL_JQ_PAGE_PROPS["76ebbf00"].triggerFunction = function(showCollectorDialog) {
-          window.__jira_issue_collector_trigger_fns__["76ebbf00"] = showCollectorDialog;
-        }
-      </script>
-    
-    
-      
-        <script nonce="">
-          window.__webpack_public_path__ = 'https://d301sr5gafysq2.cloudfront.net/frontbucket/';
-          window.__webpack_manifest__ = {"0": "0.e4064777e0eaf57d783f.js", "1": "1.0b2ee6e9cd71c0d30181.js", "2": "2.9b95712216a82f48f0f7.js", "3": "app.86db382984266ced0bdd.js", "4": "ajs.781603b620193226ab65.js"};
-        </script>
-      
-      <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/locales/en.be5121fd7c03c2530e05.js"></script>
-        <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/runtime.67414711a2939cdd5e8f.js"></script>
-      <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/vendor.ea329d775593252295d8.js"></script>
-        <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/ajs.acf9d0b29b6695ca1e57.js"></script>
-      <script nonce="" src="https://d301sr5gafysq2.cloudfront.net/frontbucket/app.daa121ad89d80e1594c6.js"></script>
-    
-    <script nonce="" type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"a2cef8c3d3","agent":"","transactionName":"Z11RZxdWW0cEVkYLDV4XdUYLVEFdClsdAAtEWkZQDlJBGgRFQhFMQl1DXFcZQ10AQkFYBFlUVlEXWEJHAA==","applicationID":"1841284","errorBeacon":"bam.nr-data.net","applicationTime":714}</script>
-  </body>
-</html>
+```
+A GUI is launched where you can select the language in left column and the recently copied voice in the right and proceed. Once the component is installed
+the voice will show as 'installed' instead of 'available' in the GUI right panel.
+
+Run the MaryTTS server.
+```
+./gradlew run
+```
+or
+```
+./gradlew server
+```
+Naviagte to `localhost:59125` on your browser. MaryTTS runs on the port 59125. Select *my_voice* from the available voices and use the interface to listen
+to the synthesized audio or have a look at the maryxml file.
