@@ -95,3 +95,5 @@ or
 ```
 ./gradlew server
 ```
+Naviagte to `localhost:59125` on your browser. MaryTTS runs on the port 59125. Select *my_voice* from the available voices and use the interface to listen
+to the synthesized audio or have a look at the maryxml file.
