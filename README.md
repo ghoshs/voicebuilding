@@ -10,6 +10,7 @@ The annonations of the recordings (a TextGrid file generated in Praat) is manual
 The TextGrid is then converted to a chronological Table format and uploaded in the repository. 
 
 ### Requirements
+<<<<<<< HEAD
 - SoX (to process the audio file)
 - Praat (*optional, if yu want to modify the flac file, speech alignments or the TextGrid*)
 - Python 2.7 or higher (to run the data pre-processing scripts)
@@ -17,6 +18,11 @@ The TextGrid is then converted to a chronological Table format and uploaded in t
 - Docker (to build HMM voice)
 - HTK account
 - Java 7 or higher 
+=======
+- SoX
+- Python 2.7 or higher
+- Gradle v4.6
+>>>>>>> new_update
 
 ### Download items for speech synthesis:
 Inside the 2018-voicebuilding-group1-data folder download the audio file.
@@ -31,7 +37,11 @@ gradle packageData
 ```
 or use the gradle wrapper command if Gradle is not installed.
 ```
+<<<<<<< HEAD
 ../gradlew packageData
+=======
+./gradlew packageData
+>>>>>>> new_update
 ```
 ### 2. Run voicebuilding
 From the voice-2018-voicebuilding-group1 folder run the follwing gradle command to unpack data and build the voices for MaryTTS
@@ -40,6 +50,7 @@ From the voice-2018-voicebuilding-group1 folder run the follwing gradle command 
 ../gradlew build
 ```
 
+<<<<<<< HEAD
 ### 3. HMM based voice 
 We use the [HTS](http://htk.eng.cam.ac.uk/extensions/index.shtml) voicebuilder toolkit provided by [HTK](http://htk.eng.cam.ac.uk/) to build HMM based voice.
 This part is run a docker container. We refer to these [slides](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/devops)
@@ -70,6 +81,10 @@ HMMVoiceCompiler"
 ```
 Copy the buildscript from [here](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/assemble-the-hts-voice) into the 
 generated Maven project directory and run `gradle build` or `gradle run`.
+=======
+### 3. Train HMM
+
+>>>>>>> new_update
 
 ### 4. Listen to the voices on new text.
 Clone the [MaryTTS v5.2](https://github.com/marytts/marytts) in the parent directory of this project and build the project using the command.
@@ -94,6 +109,10 @@ Run the MaryTTS server.
 or
 ```
 ./gradlew server
+<<<<<<< HEAD
 ```
 Naviagte to `localhost:59125` on your browser. MaryTTS runs on the port 59125. Select *my_voice* from the available voices and use the interface to listen
 to the synthesized audio or have a look at the maryxml file.
+=======
+```
+>>>>>>> new_update
