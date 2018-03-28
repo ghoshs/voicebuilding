@@ -33,25 +33,28 @@ or use the gradle wrapper command if Gradle is not installed.
 ```
 ../gradlew packageData
 ```
-### 2. Run voicebuilding
+### 2. Run Unit Selection voicebuilding
 From the voice-2018-voicebuilding-group1 folder run the follwing gradle command to unpack data and build the voices for MaryTTS
 ```
 ../gradlew legacyInit
 ../gradlew build
 ```
 
-### 3. HMM based voice 
+### 3. HMM based voicebuilding
 We use the [HTS](http://htk.eng.cam.ac.uk/extensions/index.shtml) voicebuilder toolkit provided by [HTK](http://htk.eng.cam.ac.uk/) to build HMM based voice.
 This part is run a docker container. We refer to these [slides](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/devops)
 for this part.
 #### a. Create a custom container
 Follow the instructions [here](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/hts-voicebuilding-with-docker) to
 create a container from a docker file.
+
+*Note-* Build the docker container inside the voicebuilding build directory, *i.e.,* inside voice-2018-voicebuilding-group1/build/
 #### b. Prepare HMM voice features
 Run [these](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/prepare-for-hts-voicebuilding) pre-requiesites
-before we start the docker
+before we start the docker. You should set the `db.marybase` to `\marytts` in the *database.config* file. 
+*Note-* Check the filepaths in the *database.config* point to exixting filepaths.
 #### c. Run the docker
-Depending on hoe you have installed docker, you may or may not run it with sudo
+Depending on hoe you have installed docker, you may or may not run it with sudo. 
 ```
 sudo docker run -v $PWD:$PWD -it marytts-builder-hsmm bash -c \
 "cd $PWD; \
