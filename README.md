@@ -76,11 +76,6 @@ Navigate to `localhost:59125` on your browser. MaryTTS runs on the port 59125. S
 
 ### 4. *Optional:* HMM based voicebuilding
 
->>>>>>> 20833f9b7110ad985d289bcbd3991ec2920e4db1
-We use the [HTS](http://htk.eng.cam.ac.uk/extensions/index.shtml) voicebuilder toolkit provided by [HTK](http://htk.eng.cam.ac.uk/) to build HMM based voice.
-This part is run a docker container. We refer to the seminar [slides](http://www.coli.uni-saarland.de/~steiner/teaching/2017/winter/voicebuilding/slides/index.html#/devops) for this part.
-
-
 #### a. Create a custom container
 
 The instructions were originally posted [here](http://www.coli.uni-saarland.de/~steiner/teaching/2017/winter/voicebuilding/slides/index.html#/hts-voicebuilding-with-docker):
