@@ -46,7 +46,7 @@ From the `voice-2018-voicebuilding-group1` directory run the following gradle co
 ```
 
 
-### 3. HMM based voicebuilding
+### 3. Install voice component on MaryTTS
 
 Clone the [MaryTTS v5.2](https://github.com/marytts/marytts) in the parent directory of this project and build the project using the command.
 ```
@@ -124,30 +124,9 @@ sudo docker run -v $PWD:$PWD -it marytts-builder-hsmm bash -c \
 HMMVoiceCompiler"
 ```
 
-Copy the buildscript from [here](http://www.coli.uni-saarland.de/~steiner/teaching/2017/winter/voicebuilding/slides/index.html#/assemble-the-hts-voice) into the generated Maven project directory and run `gradle build` or `gradle run`.
-
-### 4. Listen to the voices on new text.
-
-Clone the [MaryTTS v5.2](https://github.com/marytts/marytts) in the parent directory of this project and build the project using the command.
-```
-./gradlew build
-```
-Copy the zip and component descriptor xml files from the path voice-2018-voicebuilding-group1/build/distributions generated in both Step 2 and 3 and copy it to the download folder in marytts. 
-Run the marytts component installer script inside the MaryTTS project.
-```
-./gradlew runInstallerGui
-
-```
-A GUI is launched where you can select the language in left column and the recently copied voice in the right and proceed. Once the component is installed the voice will show as 'installed' instead of 'available' in the GUI right panel.
-Run the MaryTTS server.
-```
-./gradlew run
-```
-or
-```
-./gradlew server
-```
-Navigate to `localhost:59125` on your browser. MaryTTS runs on the port 59125. Select *myvoice* from the available voices and use the interface to listen to the synthesized audio and download it, or have a look at the maryxml file.
+Copy the buildscript from [here](http://www.coli.uni-saarland.de/~steiner/teaching/2017/winter/voicebuilding/slides/index.html#/assemble-the-hts-voice) into 
+the generated Maven project directory and run `gradle build` or `gradle run`. Navigate to `localhost:59125` on your browser to listen to the synthesized audio
+and download it, or have a look at the maryxml file.
 
 ## Authors
 
