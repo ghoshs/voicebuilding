@@ -40,7 +40,35 @@ From the voice-2018-voicebuilding-group1 folder run the follwing gradle command 
 ../gradlew build
 ```
 
-### 3. HMM based voicebuilding
+### 3. Listen to the voices on new text.
+Clone the [MaryTTS v5.2](https://github.com/marytts/marytts) in the parent directory of this project and build the project using the command.
+```
+./gradlew build
+```
+Copy the zip and component descriptor xml files from the path voice-2018-voicebuilding-group1/build/distributions generated in 
+both Step 2 and 3 and copy it to the download folder in marytts. 
+
+Run the marytts component installer script inside the MaryTTS project.
+```
+./gradlew runInstallerGui
+
+```
+A GUI is launched where you can select the language in left column and the recently copied voice in the right and proceed. Once the component is installed
+the voice will show as 'installed' instead of 'available' in the GUI right panel.
+
+Run the MaryTTS server.
+```
+./gradlew run
+```
+or
+```
+./gradlew server
+```
+Naviagte to `localhost:59125` on your browser. MaryTTS runs on the port 59125. Select *my_voice* from the available voices and use the interface to listen
+to the synthesized audio or have a look at the maryxml file.
+
+
+### 4. *Optional:* HMM based voicebuilding
 We use the [HTS](http://htk.eng.cam.ac.uk/extensions/index.shtml) voicebuilder toolkit provided by [HTK](http://htk.eng.cam.ac.uk/) to build HMM based voice.
 This part is run a docker container. We refer to these [slides](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/devops)
 for this part.
@@ -72,31 +100,5 @@ sudo docker run -v $PWD:$PWD -it marytts-builder-hsmm bash -c \
 HMMVoiceCompiler"
 ```
 Copy the buildscript from [here](http://www.coli.uni-saarland.de/~steiner/teaching/2016/winter/voicebuilding/slides/index.html#/assemble-the-hts-voice) into the 
-generated Maven project directory and run `gradle build` or `gradle run`.
-
-### 4. Listen to the voices on new text.
-Clone the [MaryTTS v5.2](https://github.com/marytts/marytts) in the parent directory of this project and build the project using the command.
-```
-./gradlew build
-```
-Copy the zip and component descriptor xml files from the path voice-2018-voicebuilding-group1/build/distributions generated in 
-both Step 2 and 3 and copy it to the download folder in marytts. 
-
-Run the marytts component installer script inside the MaryTTS project.
-```
-./gradlew runInstallerGui
-
-```
-A GUI is launched where you can select the language in left column and the recently copied voice in the right and proceed. Once the component is installed
-the voice will show as 'installed' instead of 'available' in the GUI right panel.
-
-Run the MaryTTS server.
-```
-./gradlew run
-```
-or
-```
-./gradlew server
-```
-Naviagte to `localhost:59125` on your browser. MaryTTS runs on the port 59125. Select *my_voice* from the available voices and use the interface to listen
-to the synthesized audio or have a look at the maryxml file.
+generated Maven project directory (created under `build/mary/voice-myvoice`) using the docker copy command and run `gradle build` or `gradle run`. `gradle run`
+automatically sets the MryTTS client on port 59125. Navigate to `localhost:59125` listen to the new voice in the MaryTTS client server. 
